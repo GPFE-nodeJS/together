@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src='/javascripts/jquery.min.js'></script>
+    <style>
+      .roll-btn{
+        width: 100px;
+        height: 100px;
+        background: #aaaaaa;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <p>GPFE-NodeJS 研习社 第二次会议 </p>
+    <div class="roll-btn">
+    </div>
+  <script>
+    $('.roll-btn').bind('click', function(){
+      $.post("roll", function(data) {
+        console.log(data);
+      });
+    })
+  </script>
+  </body>
+</html>
